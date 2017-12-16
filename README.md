@@ -1,10 +1,10 @@
-# LAMP Stack + WordPress instalacija i podesavanje
+# LAMP Stack + WordPress instalacija i podešavanje
 
-## Ukljucivanje mreznog adaptera
+## Uključivanje mrežnog adaptera
 
-Ukucati komandu nmtui, zatim izabrati opciju "Edit a connection", zatim Ethernet adapter, pa "Edit", i na kraju stiklirati opciju "Automatically connect" spacebar tasterom, zatim pritisnuti "Back" pa na kraju "Quit".
+Ukucati komandu nmtui, zatim izabrati opciju "Edit a connection", zatim Ethernet adapter, pa "Edit", i na kraju štiklirati opciju "Automatically connect" space tasterom, zatim pritisnuti "Back" pa na kraju "Quit".
 
-Testirati da li mreza radi:
+Testirati da li mreža radi:
 
 	ping 8.8.8.8
 
@@ -24,7 +24,7 @@ Testirati da li mreza radi:
 
 	nano /etc/selinux/config
 	
-I namestiti opciju SELINUX:
+I namestiti opciju SELINUX na permissive:
 
 	SELINUX=permissive
 
@@ -71,7 +71,7 @@ Zatim uraditi reboot komandom reboot.
 
 	nano /etc/yum.repos.d/remi-php70.repo
 
-naci deo sa [remi-php70] i ukljuciti ga:
+Naći deo sa [remi-php70] i ukljuciti ga:
 
 > enabled=1
 
@@ -95,7 +95,7 @@ naci deo sa [remi-php70] i ukljuciti ga:
 	cd wordpress
 	mv * /var/www/html
 
-## Podesavanje privilegija
+## Podešavanje privilegija
 
 	chown apache:apache /var/www/html -R
 
@@ -103,29 +103,29 @@ naci deo sa [remi-php70] i ukljuciti ga:
 
 	systemctl restart httpd
 
-## Instalacija WordPress - podesavanje baze - kreiranje baze podataka i korisnika:
+## Instalacija WordPress - podešavanje baze - kreiranje baze podataka i korisnika:
 
 Ulogovati se u bazu komandom:
 
 	mysql -u root -p
 
-zatim ukucati lozinku i u MySQL promptu ukucati:
+Zatim ukucati lozinku i u MySQL promptu ukucati:
 
 	CREATE DATABASE wpdb;
 	CREATE USER 'wpkorisnik'@'localhost' IDENTIFIED BY 'lozinka123';
 	GRANT ALL PRIVILEGES ON wpdb.* TO 'wpkorisnik'@'localhost';
 	FLUSH PRIVILEGES;
 
-i izaci komandom:
+Izaći komandom:
 
 	quit
 
 ## Instalacija WordPress
 
-Saznati ip adresu virtalne masine komandom:
+Saznati ip adresu virtalne mašine komandom:
 
 	ip addr show
 
-Ukucati ip adresu virtualne masine u URL bar u web browser.
+Ukucati ip adresu virtualne mašine u URL bar u web browser.
 
-I instalirati WordPress unosenjem podataka.
+I instalirati WordPress unošenjem podataka.
