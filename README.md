@@ -1,13 +1,5 @@
 # LAMP Stack + WordPress instalacija i podešavanje
 
-## Uključivanje mrežnog adaptera
-
-Ukucati komandu nmtui, zatim izabrati opciju "Edit a connection", zatim Ethernet adapter, pa "Edit", i na kraju štiklirati opciju "Automatically connect" space tasterom, zatim pritisnuti "Back" pa na kraju "Quit".
-
-Testirati da li mreža radi:
-
-	ping 8.8.8.8
-
 ## Update operativnog sistema
 
 	yum update
