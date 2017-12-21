@@ -6,7 +6,7 @@
 
 ## Instaliranje paketa
 
-	yum install wget
+	yum install wget nano
 
 ## Disable firewall
 
@@ -20,6 +20,8 @@ I namestiti opciju SELINUX na permissive:
 
 	SELINUX=permissive
 
+Da bi se sačuvao fajl u Nano editoru, potrebno je pritisnuti CTRL+X, zatim dugme y i na kraju Enter. Posle toga bi trebalo da se vratite u Linux prompt.
+
 Zatim uraditi reboot komandom reboot.
 
 ## Instalacija remi i epel repozitorijuma
@@ -30,9 +32,10 @@ Zatim uraditi reboot komandom reboot.
 	rpm -Uvh epel-release-latest-7.noarch.rpm
 	rpm -Uvh remi-release-7.rpm
 
-## Instaliranje nano editora
 
-	yum install nano
+## Osveziti repozitorijume
+
+	yum update
 
 ## Instaliranje Apache HTTP web servera
 
